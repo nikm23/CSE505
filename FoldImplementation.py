@@ -216,7 +216,7 @@ def addBestLiteral(c, pExamples, nExamples, predicates, backgroundKnowledge):
 
 def output(result):
     for rule in result:
-        print(rule[0].head + ":-", end=" ")
+        print(rule[0].head + ":-"),
         for x in rule[0].body:
             print(" " + str(x))
     return
