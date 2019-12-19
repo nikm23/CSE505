@@ -216,9 +216,12 @@ def addBestLiteral(c, pExamples, nExamples, predicates, backgroundKnowledge):
 
 def output(result):
     for rule in result:
-        print(rule[0].head + ":-"),
-        for x in rule[0].body:
-            print(" " + str(x))
+        i = 0
+        while i < len(rule):
+            print(rule[i].head + ":-"),
+            for x in rule[i].body:
+                print(" " + str(x))
+            i += 1
     return
 
 result = Fold(pExamples, nExamples, predicates, BackgroundKnowledge(rules, facts))
